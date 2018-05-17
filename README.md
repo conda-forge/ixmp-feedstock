@@ -15,8 +15,8 @@ Current build status
 ====================
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/ixmp-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ixmp-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/ixmp-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ixmp-feedstock)
 [![Windows](https://img.shields.io/appveyor/ci/conda-forge/ixmp-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/ixmp-feedstock/branch/master)
-![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
 
 Current release info
 ====================
