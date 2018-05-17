@@ -30,10 +30,15 @@ requirements:
     - matplotlib
 
 test:
+  requires:
+    - pytest
+  files:
+    - tests/*
   imports:
     - ixmp
   commands:
-    - import-timeseries -h
+    - import-timeseries -h  
+    - pytest tests
 
 about:
   home: https://github.com/iiasa/ixmp
