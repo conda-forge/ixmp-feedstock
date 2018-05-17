@@ -27,6 +27,7 @@ requirements:
     - pandas
     - nbformat
     - jupyter
+    - matplotlib
 
 test:
   imports:
