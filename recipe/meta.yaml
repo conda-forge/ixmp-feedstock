@@ -34,6 +34,7 @@ test:
     - ixmp
   commands:
     - import-timeseries -h
+    - python -c "import ixmp; ixmp.Platform(dbtype='HSQLDB')"
 
 about:
   home: https://github.com/iiasa/ixmp
