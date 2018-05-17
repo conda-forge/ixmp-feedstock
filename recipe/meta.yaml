@@ -10,7 +10,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [not linux]
+  skip: true  # [osx]
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - import-timeseries = ixmp.cli:import_timeseries
