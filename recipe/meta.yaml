@@ -1,4 +1,5 @@
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
+{% set sha256 = "18f70225bee0857dd4e47e25b185fdce48fd3efc636209356fe642180232ff8e" %}
 
 package:
   name: ixmp
@@ -6,10 +7,10 @@ package:
 
 source:
   url: https://github.com/iiasa/ixmp/archive/v{{ version }}.tar.gz
-  sha256: 512c63bc8473e667ba8571fb7125540ce47f5245b3cca71c989f089600cfd494
+  sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - import-timeseries = ixmp.cli:import_timeseries
