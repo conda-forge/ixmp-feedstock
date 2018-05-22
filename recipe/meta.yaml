@@ -1,5 +1,5 @@
 {% set version = "0.1.1" %}
-{% set sha256 = "18f70225bee0857dd4e47e25b185fdce48fd3efc636209356fe642180232ff8e" %}
+{% set sha256 = "ceba4a2323bfaa4acfa2cd9fe63c9aa6b76e60f53a6576d2f695f45b281b101c" %}
 
 package:
   name: ixmp
