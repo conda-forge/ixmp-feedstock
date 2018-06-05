@@ -1,5 +1,5 @@
 {% set version = "0.1.2" %}
-{% set sha256 = "8e3cd8b73e6a248922ac83922d42860fab9122910f1c8d1d3f62514a217776c2" %}
+{% set sha256 = "c408a98668c595f015a1877cabdce3a344c28189c054ce5ab8731b2649cf5685" %}
 
 package:
   name: ixmp
@@ -20,12 +20,12 @@ requirements:
   build:
     - python
     - pip
+  run:
     - openjdk
     - jpype1 >=0.6.2
     - cython
     - numpy
     - pandas
-  run:
     - nbformat
     - jupyter
     - matplotlib
