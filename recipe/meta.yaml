@@ -37,7 +37,7 @@ test:
   imports:
     - ixmp
   commands:
-    - python -c "import ixmp; print(ixmp.__version__); assert ixmp.__version__ == '{{ ixmp_version }}'"
+    - python -c "import ixmp; print(ixmp.__version__); assert ixmp.__version__ == '{{ version }}'"
     - import-timeseries -h
     - ixmp-config -h
     - python -c "import ixmp; ixmp.Platform(dbtype='HSQLDB')"
