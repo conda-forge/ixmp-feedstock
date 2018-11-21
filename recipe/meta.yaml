@@ -10,8 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  noarch: python
+  number: 2
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - import-timeseries = ixmp.cli:import_timeseries
