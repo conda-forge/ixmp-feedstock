@@ -1,5 +1,5 @@
-{% set version = "0.1.2" %}
-{% set sha256 = "c408a98668c595f015a1877cabdce3a344c28189c054ce5ab8731b2649cf5685" %}
+{% set version = "0.1.3" %}
+{% set sha256 = "d73ed086538ef7e02dc8133568d2953e9b24f0efd013a77d2def5f80c403c01e" %}
 
 package:
   name: ixmp
@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - import-timeseries = ixmp.cli:import_timeseries
@@ -29,6 +30,8 @@ requirements:
     - nbformat
     - jupyter
     - matplotlib
+    - xlrd
+    - xlsxwriter
 
 test:
   imports:
