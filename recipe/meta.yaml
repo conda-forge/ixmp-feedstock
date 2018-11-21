@@ -1,5 +1,5 @@
 {% set version = "0.1.3" %}
-{% set sha256 = "d73ed086538ef7e02dc8133568d2953e9b24f0efd013a77d2def5f80c403c01e" %}
+{% set sha256 = "bf4e86a942ef27e5df190a374b2890fd3f4833354c5c45862f8ac99cbb73f336" %}
 
 package:
   name: ixmp
@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
@@ -37,6 +37,7 @@ test:
   imports:
     - ixmp
   commands:
+    - python -c "import ixmp; print(ixmp.__version__); assert ixmp.__version__ == '{{ ixmp_version }}'"
     - import-timeseries -h
     - ixmp-config -h
     - python -c "import ixmp; ixmp.Platform(dbtype='HSQLDB')"
