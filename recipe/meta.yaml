@@ -47,7 +47,6 @@ test:
     - import-timeseries -h
     - ixmp-config -h
     - ixmp --help
-    - pytest -k solve_callback
 
 about:
   home: https://github.com/iiasa/ixmp
