@@ -40,6 +40,8 @@ requirements:
 test:
   imports:
     - ixmp
+  requires:
+    - pytest
   commands:
     - python -c "import ixmp; print(ixmp.__version__); assert ixmp.__version__ == '{{ version }}'"
     - import-timeseries -h
