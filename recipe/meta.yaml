@@ -47,7 +47,7 @@ test:
     - import-timeseries -h
     - ixmp-config -h
     - ixmp --help
-    - python -c "import ixmp, ixmp.testing; ixmp.testing.make_dantzig(ixmp.Platform(dbtype='HSQLDB'), solve='./tests/data'); "
+    - pytest -k solve_callback
 
 about:
   home: https://github.com/iiasa/ixmp
