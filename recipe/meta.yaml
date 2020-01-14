@@ -1,5 +1,5 @@
-{% set version = "0.2.0" %}
-{% set sha256 = "900562c581503f13d2964c49686843c0f595a4c045df0f7602010dad94e37d20" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "bb64bebfd3aea0d88e2555a382702e2fdd4c1b6ee013e8d495bb14d3d32f0a7a" %}
 
 package:
   name: ixmp
@@ -12,10 +12,8 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
-    - import-timeseries = ixmp.cli:import_timeseries
-    - ixmp-config = ixmp.cli:config
     - ixmp = ixmp.cli:main
 
 requirements:
@@ -23,9 +21,11 @@ requirements:
     - python
     - pip
   run:
+    - click
     - cython
     - dask
-    - jpype1 >=0.6.2
+    - graphviz
+    - jpype1 >=0.7
     - jupyter
     - matplotlib
     - nbformat
@@ -33,6 +33,7 @@ requirements:
     - openjdk
     - pandas
     - pint
+    - PyYAML
     - xarray
     - xlrd
     - xlsxwriter
@@ -44,8 +45,6 @@ test:
     - pytest
   commands:
     - python -c "import ixmp; print(ixmp.__version__); assert ixmp.__version__ == '{{ version }}'"
-    - import-timeseries -h
-    - ixmp-config -h
     - ixmp --help
 
 about:
