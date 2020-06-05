@@ -16,46 +16,47 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
-    - ixmp = ixmp.cli:main
+  - ixmp = ixmp.cli:main
 
 requirements:
   build:
-    - python
-    - pip
+  - python
+  - pip
   run:
-    - click
-    - cython
-    - dask
-    - graphviz
-    - jpype1 >=0.7
-    - jupyter
-    - matplotlib-base
-    - nbformat
-    - numpy
-    - openjdk
-    - pandas
-    - pint
-    - PyYAML
-    - xarray
-    - xlrd
-    - xlsxwriter
+  - click
+  - cython
+  - dask
+  - graphviz
+  - jpype1 >=0.7
+  - jupyter
+  - matplotlib-base
+  - nbformat
+  - numpy
+  - openjdk
+  - pandas
+  - pint
+  - PyYAML
+  - xarray
+  - xlrd
+  - xlsxwriter
 
 test:
   imports:
-    - ixmp
+  - ixmp
   requires:
-    - pytest
+  - pytest
   commands:
-    - python -c "import ixmp; print(ixmp.__version__); assert ixmp.__version__ == '{{ version }}'"
-    - ixmp --help
+  - python -c "import ixmp; print(ixmp.__version__); assert ixmp.__version__ == '{{ version }}'"
+  - ixmp --help
 
 about:
   home: https://github.com/iiasa/ixmp
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'The ix modeling platform for integrated and cross-cutting scenario analysis'
+  summary: |
+    The ix modeling platform for integrated and cross-cutting scenario analysis
 
 extra:
   recipe-maintainers:
-    - gidden
-    - khaeru
+  - gidden
+  - khaeru
