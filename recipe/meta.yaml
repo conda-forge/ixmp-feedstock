@@ -1,12 +1,14 @@
+{% set name = "ixmp" %}
 {% set version = "2.0.0" %}
-{% set sha256 = "bb64bebfd3aea0d88e2555a382702e2fdd4c1b6ee013e8d495bb14d3d32f0a7a" %}
+{% set sha256 = "1e1bcc22efc0de4790b9ad37a067f63cba721a2f5846b493dd95cd7292b20f0e" %}
 
 package:
-  name: ixmp
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/iiasa/ixmp/archive/v{{ version }}.tar.gz
+  # TODO switch to PyPI after v3.0.0
+  url: https://github.com/iiasa/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
