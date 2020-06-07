@@ -21,18 +21,19 @@ requirements:
   build:
   - python
   - pip
+  - setuptools-scm
   run:
   - click
   - cython
-  - dask
+  - dask >=2.14
   - graphviz
-  - jpype1 >=0.7
+  - jpype1 >=0.7.5
   - jupyter
   - matplotlib-base
   - nbformat
   - numpy
   - openjdk
-  - pandas
+  - pandas >=1.0
   - pint
   - PyYAML
   - xarray
