@@ -1,20 +1,19 @@
 {% set name = "ixmp" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "1e1bcc22efc0de4790b9ad37a067f63cba721a2f5846b493dd95cd7292b20f0e" %}
+{% set version = "3.0.0" %}
+{% set hash = "f8786737e41e2fd0896b2c8bd5b777e61404ae5c63a33cbeadbbf8f6f2a6c71a" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  # TODO switch to PyPI after v3.0.0
-  url: https://github.com/iiasa/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
   - ixmp = ixmp.cli:main
 
