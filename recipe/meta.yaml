@@ -1,6 +1,6 @@
 {% set name = "ixmp" %}
-{% set version = "3.0.0" %}
-{% set hash = "f8786737e41e2fd0896b2c8bd5b777e61404ae5c63a33cbeadbbf8f6f2a6c71a" %}
+{% set version = "3.1.0" %}
+{% set hash = "46477b47f1123b3e7c5325bf094843462c0098f3074d63a791fdac3b2a88a6a2" %}
 
 package:
   name: {{ name }}
@@ -13,40 +13,40 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-  - ixmp = ixmp.cli:main
+    - ixmp = ixmp.cli:main
 
 requirements:
   build:
-  - python
-  - pip
-  - setuptools-scm
+    - python
+    - pip
+    - setuptools-scm
   run:
-  - click
-  - cython
-  - dask >=2.14
-  - graphviz
-  - jpype1 >=0.7.5
-  - jupyter
-  - matplotlib-base
-  - nbformat
-  - numpy
-  - openjdk
-  - pandas >=1.0
-  - pint
-  - PyYAML
-  - xarray
-  - xlrd
-  - xlsxwriter
+    - click
+    - cython
+    - dask >=2.14
+    - graphviz
+    - jpype1 >=0.7.5
+    - jupyter
+    - matplotlib-base
+    - nbformat
+    - numpy
+    - openjdk
+    - pandas >=1.0
+    - pint
+    - PyYAML
+    - xarray
+    - xlrd
+    - xlsxwriter
 
 test:
   imports:
-  - ixmp
+    - ixmp
   requires:
-  - pytest
+    - pytest
   commands:
-  - ixmp --help
+    - ixmp --help
 
 about:
   home: https://github.com/iiasa/ixmp
@@ -57,5 +57,5 @@ about:
 
 extra:
   recipe-maintainers:
-  - gidden
-  - khaeru
+    - gidden
+    - khaeru
