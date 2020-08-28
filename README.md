@@ -5,7 +5,7 @@ Home: https://github.com/iiasa/ixmp
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: The ix modeling platform for integrated and cross-cutting scenario analysis
 
