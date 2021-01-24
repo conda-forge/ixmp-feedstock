@@ -19,34 +19,32 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3.6
     - pip
     - setuptools-scm
+
   run:
     - click
-    - cython
     - dask >=2.14
     - graphviz
-    - jpype1 >=0.7.5
-    - jupyter
-    - matplotlib-base
+    - jpype1 >=1.2.1
     - nbformat
     - numpy
     - openjdk
+    - openpyxl
     - pandas >=1.0
     - pint
+    - python >=3.6
     - PyYAML
+    - sparse >=0.10
     - xarray
-    - xlrd
-    - xlsxwriter
 
 test:
   imports:
     - ixmp
-  requires:
-    - pytest
   commands:
     - ixmp --help
+    - ixmp show-versions
 
 about:
   home: https://github.com/iiasa/ixmp
