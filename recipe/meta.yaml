@@ -31,7 +31,7 @@ requirements:
     - openpyxl
     - pandas >=1.2
     - pint
-    - python >=3.6
+    - python >=3.7
     - PyYAML
     - xarray
 
