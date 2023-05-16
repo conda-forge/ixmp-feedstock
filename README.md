@@ -1,11 +1,11 @@
-About ixmp
-==========
+About ixmp-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ixmp-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/iiasa/ixmp
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ixmp-feedstock/blob/main/LICENSE.txt)
 
 Summary: The ix modeling platform for integrated and cross-cutting scenario analysis
 
@@ -144,8 +144,8 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@LauWien](https://github.com/LauWien/)
 * [@danielhuppmann](https://github.com/danielhuppmann/)
+* [@glatterf42](https://github.com/glatterf42/)
 * [@khaeru](https://github.com/khaeru/)
 * [@phackstock](https://github.com/phackstock/)
 
