@@ -1,6 +1,6 @@
 {% set name = "ixmp" %}
-{% set version = "3.6.0" %}
-{% set hash = "e8b804909cbcb2009953d3911285abb672b0f6028d7c2e42a7446def760f3a80" %}
+{% set version = "3.7.0" %}
+{% set hash = "fb7e85b95b0e09382b051d60c502f96118bf456b51a9d8727692d0d55424aedd" %}
 
 package:
   name: {{ name }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
