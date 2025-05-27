@@ -25,6 +25,10 @@ requirements:
     - setuptools
 
   run:
+    # Per requires-python in pyproject.toml
+    # The value is set in .ci_support/linux_64_.yaml
+    - python >={{ python_min }}
+    # Mandatory dependencies per pyproject.toml
     - click
     - genno >=1.20.0
     - jpype1 >=1.2.1
@@ -32,9 +36,11 @@ requirements:
     - openpyxl
     - pandas >=1.2
     - pint
-    - python >={{ python_min }}
     - PyYAML
     - xarray
+    # Optional dependencies from the "ixmp4" set
+    # - ixmp4 >=0.10, <=0.11  # python_min == 3.9 only satisfied by ixmp4 0.4.0
+    # - gamsapi               # Not packaged for conda as of 2025-05-27
 
 test:
   requires:
