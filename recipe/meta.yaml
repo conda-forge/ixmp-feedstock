@@ -1,6 +1,6 @@
 {% set name = "ixmp" %}
-{% set version = "3.11.0" %}
-{% set hash = "4acc853940b863e3134aa545c0c2ea15782832001052accfce3f3b3262c0ea60" %}
+{% set version = "3.11.1" %}
+{% set hash = "69c1b8676e5b2bdf00f902d1d14e2b55802c1c43b924dc02861e0d5871304759" %}
 
 package:
   name: {{ name }}
